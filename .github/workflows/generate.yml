@@ -20,6 +20,8 @@ jobs:
         run: pip3 install -r requirements.txt
       
       - name: Run Generator
+        env:
+          RSS_LINK: https://chand1012.github.io/static-rss-generator/feed.xml
         run: python3 main.py
 
       - name: Update Feed
