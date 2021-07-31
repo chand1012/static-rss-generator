@@ -1,0 +1,30 @@
+name: "Generate XML"
+
+on:
+  # Schedule updates
+  schedule: [{cron: "0 10 * * *"}]
+  push: 
+    branches: 
+      - master
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps: 
+      - uses: actions/checkout@v2
+      - name: Setup Python 3.9
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+      - name: Install Dependencies
+        run: pip3 install -r requirements.txt
+      
+      - name: Run Generator
+        run: python3 main.py
+
+      - name: Move Files
+        run: |
+          mv feed.xml temp-feed.xml
+          
+
+          
