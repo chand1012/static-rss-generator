@@ -158,4 +158,5 @@ cython_debug/
 .history
 .ionide
 feed.xml
+.secrets
 # End of https://www.toptal.com/developers/gitignore/api/python,visualstudiocode
