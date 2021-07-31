@@ -22,9 +22,23 @@ jobs:
       - name: Run Generator
         run: python3 main.py
 
-      - name: Move Files
+      - name: Update Feed
         run: |
+          git config user.name "Github Action"
+          git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
           mv feed.xml temp-feed.xml
+          git checkout gh-pages
+          rm feed.xml
+          mv temp-feed.xml feed.xml
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "there are changes";
+            git commit -am "[bot] Update static files." 
+            git push "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git" gh-pages
+          else
+            echo "no changes";
+          fi
           
+
+
 
           
