@@ -35,7 +35,7 @@ jobs:
           if [ -n "$(git status --porcelain)" ]; then
             echo "there are changes";
             git commit -am "[bot] Update static files." 
-            git push "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git" gh-pages
+            git push "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git" refs/heads/gh-pages
           else
             echo "no changes";
           fi
