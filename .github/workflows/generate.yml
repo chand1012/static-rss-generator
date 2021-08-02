@@ -2,7 +2,7 @@ name: "Generate XML"
 
 on:
   # Schedule updates
-  schedule: [{cron: "0 10 * * *"}]
+  schedule: [{cron: "0 10/6 * * *"}]
   push: 
     branches: 
       - master
