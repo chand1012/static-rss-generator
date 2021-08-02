@@ -1,8 +1,0 @@
-https://hackaday.com/blog/feed/
-https://www.tomshardware.com/feeds/all
-https://www.phoronix.com/rss.php
-https://www.pcgamer.com/rss/
-https://www.gamersnexus.net/news/feed
-https://feeds.howtogeek.com/HowToGeek
-http://feed.androidauthority.com/
-https://www.bleepingcomputer.com/feed/

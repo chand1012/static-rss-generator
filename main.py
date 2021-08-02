@@ -1,6 +1,7 @@
 from datetime import datetime
 import os
 import random
+import json
 
 import arrow
 from dotenv import load_dotenv
@@ -10,20 +11,24 @@ from rfeed import Feed, Item
 load_dotenv() # this is for development
 
 links = []
-with open('links.txt') as f:
-    links = f.readlines()
+
+with open('links.json') as f:
+    links = json.loads(f.read())
+
+print(links)
 
 data = []
 
 for link in links:
-    feed = feedparser.parse(link)
-    newest = feed['entries'][0]
-    data.append(Item(
-        title=newest['title'],
-        pubDate=arrow.get(newest['published'], 'DD MMM YYYY HH:mm:ss'),
-        description=newest['summary'],
-        link=newest['link']
-    ))
+    feed = feedparser.parse(list(link.keys())[0])
+    for i in range(list(link.values())[0]):
+        newest = feed['entries'][i]
+        data.append(Item(
+            title=newest['title'],
+            pubDate=arrow.get(newest['published'], 'DD MMM YYYY HH:mm:ss'),
+            description=newest['summary'],
+            link=newest['link']
+        ))
 
 random.shuffle(data)
 
