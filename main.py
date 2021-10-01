@@ -15,7 +15,7 @@ links = []
 with open('links.json') as f:
     links = json.loads(f.read())
 
-print(links)
+# print(links)
 
 data = []
 

@@ -1,10 +1,28 @@
-[
-    {"https://hackaday.com/blog/feed/": 2},
-    {"https://www.tomshardware.com/feeds/all": 3},
-    {"https://www.phoronix.com/rss.php": 2},
-    {"https://www.pcgamer.com/rss/": 3},
-    {"https://www.gamersnexus.net/news/feed": 1},
-    {"https://feeds.howtogeek.com/HowToGeek": 1},
-    {"http://feed.androidauthority.com/": 1},
-    {"https://www.bleepingcomputer.com/feed/": 1}
+[{
+        "https://hackaday.com/blog/feed/": 2
+    },
+    {
+        "https://www.tomshardware.com/feeds/all": 3
+    },
+    {
+        "https://www.phoronix.com/rss.php": 2
+    },
+    {
+        "https://www.pcgamer.com/rss/": 3
+    },
+    {
+        "https://www.gamersnexus.net/news/feed": 1
+    },
+    {
+        "https://feeds.howtogeek.com/HowToGeek": 1
+    },
+    {
+        "http://feed.androidauthority.com/": 1
+    },
+    {
+        "https://www.bleepingcomputer.com/feed/": 1
+    },
+    {
+        "https://github.blog/feed/": 2
+    }
 ]
