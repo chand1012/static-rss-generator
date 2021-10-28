@@ -1,0 +1,20 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+fastapi = {extras = ["all"], version = "*"}
+arrow = "*"
+feedparser = "*"
+rfeed = "*"
+python-dotenv = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"
+
+[scripts]
+server = "uvicorn app:app --host 0.0.0.0 --port $PORT"
+main = "python main.py"
