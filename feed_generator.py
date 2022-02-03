@@ -1,6 +1,4 @@
 from datetime import datetime
-import random
-import json
 
 import arrow
 import feedparser
@@ -21,8 +19,6 @@ def generate_feed(link_data: list[dict], rss_link: str) -> str:
                 description=newest['summary'],
                 link=newest['link']
             ))
-
-    random.shuffle(data)
 
     return_feed = Feed(
         title='Aggregate RSS Feed',
